@@ -4,17 +4,13 @@ const ws = new WebSocket("ws://localhost:8082");
 
 ws.addEventListener("open", () => {
     console.log("We are connected!");
-
-    ws.send(`${playername}`);
-    ws.send(`${score}`);
+    
 });
 
 // Enter Name
 
 var playername = prompt("Enter Your Name To Start The Game.");
 
-const play1 = document.getElementById('pl1');
-play1.innerHTML = `Player 1- ${playername}`;
 
 // Countdown Timer Code
 
@@ -311,3 +307,21 @@ function match_found()
 {
     score = score + 10;
 }
+
+const play1 = document.getElementById('pl1');
+play1.innerHTML = `Player 1- ${playername}`;
+
+const play2 = document.getElementById('pl2');
+play2.innerHTML = `Player 2- ${playername}`;
+
+const play3 = document.getElementById('pl3');
+play3.innerHTML = `Player 3- ${playername}`;
+
+const score1 = document.getElementById('sc1');
+score1.innerHTML = `Score: ${score}`;
+
+const score2 = document.getElementById('sc2');
+score2.innerHTML = `Score: ${score}`;
+
+const score3 = document.getElementById('sc3');
+score3.innerHTML = `Score: ${score}`;
